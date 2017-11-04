@@ -1,110 +1,307 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<head>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-</head>
-  
-<style type="text/css">
-	body {
-	  margin-top: 20px;
-	}
+  <head>
 
-	.first-section {
-	  margin-top: 0px;
-	  background: gray;
-	  background-size: cover;
-	}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	.second-section {
-	  margin-top: 0px;
-	  background: tan;
-	  background-size: cover;
-	  font-family: arial;
-	}
+    <title>Resume - Start Bootstrap Theme</title>
 
-	.top {
-	  font-family: arial;
-	 /* margin-left: 40px;*/
-	}
-	.bottom {
-	  font-family: sans-serif;
-	}
-</style>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  
-<div class="container-fluid">
-  
-<div class="first-section">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1 class="top text-center" style="color: tan"><br /><br /><br /><strong>Phillip Benjamin Ring</strong>           
-      </h1>     
-      <h2 class="top text-center" style="">Computer Engineer, Developer, Artist<br /><br />
-      </h2>
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+     		<!-- had img-profile -->			
+          <img class="img-fluid rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#coursework">Coursework</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+       </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">Phillip 
+            <span class="text-primary">Ring</span>
+          </h1>
+          <div class="subheading mb-5">1517 Washtenaw Ave · Ann Arbor, MI · 248.556.1679 ·
+            <a href="mailto:name@email.com">pring@umich.edu</a>
+          </div>
+          <p class="mb-5">I am a Master's student in Embedded Systems and Robotics at the University of Michigan. Leveraging technology to better all facets of society is my passion.</p>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/phillip-ring-519326a7/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/pringithub">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Research Assistant</h3>
+              <div class="subheading mb-3">University of Michigan Perception | Robotics | Grounded Reasoning | Systems Lab (Lab 4PROGRESS)</div>
+              <p>Developing an interface for a kleptomaniac robot, or Kleptobot. The current robot we are working on is the Fetch robot by Fetch Robotics, built on ROS.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">November 2017 - Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Embedded Systems / Computer Vision Intern</h3>
+              <div class="subheading mb-3">Occipital, Inc.</div>
+			  <p>• Designed linear depth accuracy test infrastructure for production line qualification, used OpenCV</br>
+			  • Architected low-level firmware, protocol messaging (iOS App front-end)</br>
+• Sourced and tested multiple robotic manipulators (robot arms) for use in camera calibration</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">May 2017 - August 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Instructional Aide, Introduction to Logic Design</h3>
+              <div class="subheading mb-3">University of Michigan</div>
+			  <p>• Tought and coordinated two weekly lab-based sections using Altera DE2-115</br>
+				 • Helped students with Quartus application software, IoT/embedded projects, FPGA programming</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2016 - April 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Engineer Intern</h3>
+              <div class="subheading mb-3">Hewlett Packerd Enterprise</div>
+	  		  <p>• Developed multithreaded monitoring tool for data migrations; web service backend, UI frontend</br>
+• Increased productivity by 3 minutes per migration instance check, avg 100 instances per migration
+</p>	
+			
+			</div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">May 2016 - August 2016</span>
+            </div>
+          </div>
+
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Test Engineer Intern</h3>
+              <div class="subheading mb-3">TRAM, INC.</div>
+			  <p>• Programmed macros to analyze, manipulate, and graph test data; used VBA and Microsoft Excel</br>
+			  • Facilitated testing of automotive switches and parts in accordance with customer specifications</br>
+• Improved design of switch internals, electronics and electromechanics, led to lower failure rates by 20%</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">May 2015 - August 2015</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">University of Michigan</h3>
+              <div class="subheading mb-3">Master of Science in Engineering</div>
+              <div>Electrical and Computer Engineering - Embedded Systems and Robotics</div>
+              <p>GPA: 4.00</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2017 - April 2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">University of Michigan</h3>
+              <div class="subheading mb-3">Bachelor of Science in Engineering</div>
+			  <div>Computer Engineering</div>
+              <p>GPA: 3.64</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2013 - April 2017</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="coursework">
+        <div class="my-auto">
+          <h2 class="mb-5">Coursework</h2>
+          <p>
+		  <p>Embedded Systems</p>
+		  <ul>
+			<li>Microprocessor-Based Design</li>
+			<li>Advanced Embedded Systems</li>
+			<li>Embedded Control Systems</li>
+		  </ul>
+		  <p>Autonomy, Perception, and Control</p>
+		  <ul> 
+		    <li>Self-Driving Cars: Perception and Control</li>
+			<li>Robotic Manipulation and Control</li>
+			<li>Computer Vision</li>
+			<li>Embedded Control Systems</li>
+		  </ul>	
+		  <p>Software Systems</p>
+		  <ul>
+		    <li>Operating Systems</li>
+			<li>Advanced Programming and Data Structures</li>
+		  </ul>	
+		  <p>Circuits, Signals, and Systems</p>
+		  <ul>
+			<li>Signals and Control Systems</li>
+			<li>Intro Circuits</li>
+			<li>Advanced Embedded Systems</li>
+		  </ul>
+		  </p>
+        </div>
+      </section>
+
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages</div>
+          General 
+		  <ul>
+          	<li>C/C++</li>
+			<li>Python</li>
+			<li>MATLAB</li>
+			<li>Javascript</li>
+			<li>bash</li>
+			<li>C#</li>
+			<li>Objective-C/C++</li>
+			<li>VBA</li>
+		  </ul>
+		  Low-Level
+		  <ul>
+			  <li>Arduino</li>
+			  <li>ARM ISA</li>
+			  <li>Verilog</li>
+		  </ul>
+		  Web
+		  <ul>
+			<li>HTML5</li>
+			<li>CSS3</li>
+			<li>Javascript</li>
+		  </ul>
+
+          <div class="subheading mb-3">Software Tools &amp; Frameworks</div>
+		  <ul>
+			<li>git/Github</li>
+			<li>OpenCV</li>
+			<li>ROS</li>
+			<li>FreeRTOS</li>
+		  </ul>
+
+          <div class="subheading mb-3">Hardware Tools</div>
+		  <ul>
+			<li>Oscilloscopes</li>
+			<li>Power Supplies</li>
+			<li>Multimeters</li>
+			<li>Frequency Generators</li>
+			<li>EAGLE CAD</li>
+		  </ul>
+
+		</div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+        </div>
+      </section>
+
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-2">
-        <a href="resume.pdf" target="_blank">
-          <button class="btn btn-block btn-primary"><strong>Resume</strong></button>
-        </a>
-      </div>
-      <div class="col-xs-2">
-        <a href="https://github.com/pringithub" target="_blank">
-          <button class="btn btn-block btn-primary"><strong>GitHub</strong></button>
-        </a>
-      </div>
-      <div class="col-xs-2">
-        <a href="http://codepen.io/pring/#" target="_blank">
-          <button class="btn btn-block btn-primary"><strong>CodePen</strong></button>
-        </a>
-      </div>
-      <div class="col-xs-2">
-        <a href="https://www.linkedin.com/in/phillip-ring-519326a7" target="_blank">
-          <button class="btn btn-block btn-primary"><strong>LinkedIn</strong></button>
-        </a>
-      </div>
-    </div>
-    <div class="row"><br /><br /></div>
-  </div>
-</div>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<div class="second-section">
-  <div class="container-fluid">
-	  <div class="row text-center" style="">
-      <h2><strong>Computer Engineer</strong></h2>
-      <div class="col-xs-2"></div>
-	    <div class="col-xs-4">      
-	      <br />
-	      <p>I'm a senior in Computer Engineering at the College of Engineering at the University of Michigan</p>
-	      <br />
-	      <p>I'm a part of Eta Kappa Nu, an EECS Honors Society (really a glorified fraternity)</p>
-	      <br />
-	      <p>I've taken a few fun classes over the years, feel free to click on any of the links on this page to see the fruits of that labor</p>
-	    </div>
-	    <div class="col-xs-4">
-	      <br />
-	      <div class="vid">
-	        <iframe width="330" height="186" src="https://www.youtube.com/embed/IQBZd8uSsUo" frameborder="0" allowfullscreen></iframe>  
-	      </div>
-	    </div>    
-      
-	  </div>
-	  <div class="row"><br /></div>
-  </div>
-</div>
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
 
-<div class="footer text-center" style="background-color: gray">
-  <p style="font-family: helvetica"><br />Phillip B Ring 2016 <br />
-    <div class="row"></div>
-  </p>
-</div>
+  </body>
 
-
-</div>
+</html>
