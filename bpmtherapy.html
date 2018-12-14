@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" type="text/css"href="bpmtherapy.css">
+</head>
+
+
+<html>
+  <!--h1 align="center">Classical Musical BPM Therapy</h1-->
+  <div align="center">
+  <img src="bpmtherapylogo.png" width="700"/>
+  <p align="center">Hope u like Tchaikovsky punk</p>
+ 
+  <body>
+    </br>
+    <div class="button" onclick="load_tracks(0,80)">
+      <p>Calming - <80 BPM</p>
+    </div>%npsp;
+    <div class="button" onclick="load_tracks(80,100)">
+      <p>Studying - 80-100 BPM</p>
+    </div>%npsp;
+    <div class="button" onclick="load_tracks(100,130)">
+      <p>Good Listening - 100-130 BPM</p>
+    </div>%npsp;
+    <div class="button" onclick="load_tracks(130,1000)">
+      <p>Dancing >130 BPM</p>
+    </div>%npsp;
+    
+    </br></br></br>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+    </br>
+
+    <script>
+      function load_tracks(minBPM,maxBPM) {
+        //run python thing to do actual stuff
+        
+        console.log(minBPM);
+        // test for now 
+        switch(minBPM) {
+          case 0:
+            vid_list = ['lzDYnpaW-8s', 'XahnVDfn09M', 'hmSoXMfoLeI', 'dZzoF9N8I6Y', 'ovFPKu00cCc', 'DAG7u82NO3U', 'uVPUmz7JFmY', 'T22Rc740iO4', 'x-RBu9sLNqc', 'M59rglT_oAU', 'EkGJm8WTmM4', '9GEO_Iug1vA', 'G_udv5o47f8', 'mjSrw718Dv4', 'EIrYH7K6uDs', 'hmSoXMfoLeI', 'xeDF2tvKClg', 'uZmLx4w2VHo', 'ROmb3yj06kA', 'yYSlZrW3sxY'];
+            break;
+          case 80:
+            vid_list = ['iFPVJGEuX3k', 'h47DZ8sqdE8', 'pBMB69nspJw', 'ovFPKu00cCc', 'Tzr9hkq_vgg', 'Bj_DgWSI5ZM', '9rJoB7y6Ncs', 'cbJZeNlrYKg', 'DLuNIMlnDo4', 'DLuNIMlnDo4', 'ombbFcmjXZc', 'b44-5M4e9nI', 'TapFpNfhUws', 'cRoB5-kT2fk', 'wJ_ENuSxw68', 'xVBNVR1wQT8', 'tu4Y9yMKPTE', 'VRGELERk1Q4', '0rM8LvlrKIQ', 'l6c8gwrzFXI', 'DPBKukl0oc4', 'DqyyB6JUeNQ', 'QxHkLdQy5f0', 'FaP8nlga2SE', 'RZXNsT56PVk', 'dlhZVJCdzLY'];
+            break;
+          case 100:
+            vid_list = ['cySaSSsD0Ow', 'M8J8urC_8Jw', 'fPuf9krTR4w', 'TPXox6zxrWc', 'Jm8ylWXvgyU', 'goph3wBKQ0E', 'EIrYH7K6uDs', 'EVSb3dFszH4', '-tzvebu6U08', 'yJdh84BEiQg', 'yJdh84BEiQg', 'BpKET-YL3hM', 'xeDF2tvKClg', 'bPebP0ZGzX8', 'jC6kbXlVEZY', 'bWwFKw-54uo', '1gGa8FdS_5o', 'M8J8urC_8Jw', '45lNvNsdPLc', 'lJjtjMAwk3c', 'rJlD2sEk6zQ', 'cFKe9MXrcJM', 'C7aZGz07vWs', 'XahnVDfn09M', 'vr7Ni0FCdt4', '29p0gQnUEnk', 'wT5KGCmaVcQ', 'VbxgYlcNxE8', 'M8J8urC_8Jw', '3LNwEWKJ4nk', 'QxHkLdQy5f0', 'llB7NaWLUc4', '-Zr3iSwGE9g', 'M8J8urC_8Jw'];
+            break;
+          case 130:
+            vid_list = ['QxHkLdQy5f0', 'hGwjHRfcsMQ', 'KYfuzfgsGiY', '8tGCYwOllI4', '3nkgm99c-m8', 'GP_ZoVAvJYk', 'uZmLx4w2VHo', 'BrL1tyQVlko', 'EJeE2BvKFb0', 'Ah_fDwREp6g', 'hDq-jT7iK9A', '0ir7CAK8XC8', 'zNf21xQsB7g', 'PVarR8JvT-g', '7T-viwBL2dw', 'eZFUaQxuymA', 'Iog66FQV4fw', 'Z-rw51NaXhk', 'Ah_fDwREp6g', 'EJeE2BvKFb0'];
+            break;
+        }
+        vid_id = vid_list[getRndInteger(0,vid_list.length)];
+        player.loadVideoById({'videoId': vid_id,
+                              'startSeconds': 5,
+                              'endSeconds': 60,
+                              'suggestedQuality': 'large'});
+      }
+      
+      
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: '',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        // this should work
+//        player.cuePlaylist(['-4788Tmz9Zo','kIgKJ33I0x0','2SxXgh4i7O4'],5);
+//        console.log('cued up')
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+//        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        console.log('fu')
+        if (event.data == YT.PlayerState.ENDED) {
+          player.loadVideoById({'videoId': getRandomVid(),
+              'startSeconds': 5,
+               'endSeconds': 60,
+               'suggestedQuality': 'large'});
+          player.play();
+          console.log('ok')
+        }
+ 
+//        if (event.data == YT.PlayerState.PLAYING && !done) {
+//          setTimeout(stopVideo, 6000);
+//          done = true;
+//        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+      
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
+      }
+      function getRandomVid() {//}vid_list) {
+        //vid_list = ['-4788Tmz9Zo','kIgKJ33I0x0','2SxXgh4i7O4'];
+        vid_list =  ['cySaSSsD0Ow', 'M8J8urC_8Jw', 'QxHkLdQy5f0', 'hGwjHRfcsMQ', 'KYfuzfgsGiY', '8tGCYwOllI4', '3nkgm99c-m8', 'GP_ZoVAvJYk', 'uZmLx4w2VHo', 'BrL1tyQVlko', '-tzvebu6U08', 'yJdh84BEiQg', 'BpKET-YL3hM', 'jC6kbXlVEZY', 'bWwFKw-54uo', 'EJeE2BvKFb0', 'Ah_fDwREp6g', 'hDq-jT7iK9A', 'rJlD2sEk6zQ', '0ir7CAK8XC8', 'zNf21xQsB7g', 'PVarR8JvT-g', '7T-viwBL2dw', 'eZFUaQxuymA', 'VbxgYlcNxE8', 'Iog66FQV4fw', 'llB7NaWLUc4', '-Zr3iSwGE9g', 'Z-rw51NaXhk', 'Ah_fDwREp6g', 'EJeE2BvKFb0'];
+        vid = vid_list[getRndInteger(0,vid_list.length)];
+        return vid;
+      }
+    </script>
+  </body>
+    
+    <p>Made with luv <3 by Phillip Ring</p>  
+  </div>
+</html>
+
+
+
