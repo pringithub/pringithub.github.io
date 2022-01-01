@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+
+    <style>
+    a-scene {
+        height: 500px;
+        max-width: 1000px;
+    }
+
+    button {
+        border: none;
+        color: white;
+        background-color: #008CBA;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+
+    <h1>Shaar Winter Xperience 2021 !!!!!!!!!</h1>
+
+    <a-scene embedded>
+      
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="10" src="360imgs/01_EWEL9081.jpeg"></a-sky>
+
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+        <a-cursor
+          id="cursor"
+          raycaster="objects: .link"></a-cursor>
+      </a-entity>
+    </a-scene>
+
+    <p id="outof"></p>
+    <button onclick="prevImage()">Go To Prev Image!</button>
+    <button onclick="nextImage()">Go To Next Image!</button>
+
+    </br>
+    </br>
+    <audio controls autoplay>
+        <source src="audio/bobover_niggun.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+  </body>
+  <script>
+        imgs =  ['360imgs/01_EWEL9081.jpeg', '360imgs/02_UMQS3972.jpeg', '360imgs/03_VWWY8472.jpeg', '360imgs/04_MDWX4500.jpeg', '360imgs/05_LAVG9934.jpeg', '360imgs/06_IGYK6584.jpeg', '360imgs/07_TGNA3509.jpeg', '360imgs/08_CMTJ2034.jpeg', '360imgs/09_QTPF6072.jpeg', '360imgs/10_GPWM8234.jpeg', '360imgs/11_TSAQ1205.jpeg', '360imgs/12_NKLQ6560.jpeg', '360imgs/13_APSL3233.jpeg', '360imgs/14_CUBQ0940.jpeg', '360imgs/15_WNLB7785.jpeg', '360imgs/16_RHMO7171.jpeg', '360imgs/17_UHEL2873.jpeg', '360imgs/18_UTON3343.jpeg', '360imgs/19_ESUW0019.jpeg', '360imgs/20_HNRX8095.jpeg', '360imgs/21_BFTL1176.jpeg', '360imgs/22_MBFG5557.jpeg', '360imgs/23_QIPX3005.jpeg', '360imgs/24_SHNL2314.jpeg', '360imgs/25_DHUV8965.jpeg', '360imgs/26_NVFA2723.jpeg', '360imgs/27_XKWH3998.jpeg', '360imgs/28_IPUK7958.jpeg', '360imgs/28a_TWLZ6633.jpeg', '360imgs/29_DJYG6836.jpeg', '360imgs/30_SPKC0241.jpeg', '360imgs/31_MFCN6254.jpeg', '360imgs/32_TEOB7450.jpeg', '360imgs/33_IDRH4898.jpeg', '360imgs/34_FYUB4887.jpeg', '360imgs/35_WHZN9038.jpeg', '360imgs/36_HVCD9792.jpeg', '360imgs/37_CUVQ1598.jpeg', '360imgs/38_WZOQ8824.jpeg', '360imgs/39_JWTZ3235.jpeg']
+
+        i=0
+
+        function nextImage() {
+            console.log("going to next image..")
+
+            i = i+1
+            if (i==imgs.length) {i = 0}
+            new_img = imgs[i]
+            ith = i+1
+
+            document.getElementById('outof').innerText = ith + " out of " + imgs.length
+            document.getElementById('image-360').setAttribute("src",new_img)
+        }
+
+        function prevImage() {
+            console.log("going to prev image..")
+
+            i = i-1
+            if (i<0) {i = imgs.length-1}
+            new_img = imgs[i]
+            ith = i+1
+
+            document.getElementById('outof').innerText = ith + " out of " + imgs.length
+            document.getElementById('image-360').setAttribute("src",new_img)
+        }
+  </script>
+</html>
