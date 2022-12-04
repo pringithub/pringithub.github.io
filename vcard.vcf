@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Phillip Ring
+N;CHARSET=UTF-8:Ring;Phillip;;;
+NICKNAME;CHARSET=UTF-8:Phil
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:pbring95@gmail.com
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:pring5@ford.com
+PHOTO;ENCODING=b;TYPE=PNG:IMAGEDATA..
+TEL;TYPE=CELL:248-556-1679
+TEL;TYPE=WORK,VOICE:313-820-6108
+TITLE;CHARSET=UTF-8:Robotics Engineer
+ORG;CHARSET=UTF-8:Ford Motor Co
+URL;CHARSET=UTF-8:pringithub.github.io
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/phillip-ring-519326a7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhTHpxqd%2BQGOhzB5LYZbJNg%3D%3D
+REV:2022-12-04T20:09:59.898Z
+END:VCARD
